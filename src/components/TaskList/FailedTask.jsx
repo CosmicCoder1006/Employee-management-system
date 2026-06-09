@@ -1,7 +1,7 @@
 import React from "react";
 
-const ComepleteTask=()=>{
-    return(
+const FailedTask=()=>{
+    return (
         <div className='flex-shrink-0 h-full w-[300px] bg-white rounded-lg pd-5'>
                 <div className='flex justify-between items-center mt-5 '>
                     <h3 className='bg-red-600 text-sm px-3 py-1 rounded-md'>High</h3>
@@ -12,11 +12,9 @@ const ComepleteTask=()=>{
                 <p className='text-sm mt-3 text-gray-500'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.
                 </p>
-                <div className='mt-4'>
-                    <button className='bg-green-500 py-1 px-2 text-sm'>Completed</button>
+                <div className='mt-4'> 
+                    <button className='bg-red-500 py-1 px-2 text-sm'>Mark as Failed</button>
                 </div>
             </div>
     )
 }
-
-export default ComepleteTask
