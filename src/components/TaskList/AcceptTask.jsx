@@ -1,6 +1,6 @@
-import React from "react";
+import react from 'react';
 
-const NewTask =()=>{
+const AcceptTask = ()=>{
     return(
         <div className='flex-shrink-0 h-full w-[300px] bg-white rounded-lg pd-5'>
                 <div className='flex justify-between items-center mt-5 '>
@@ -13,8 +13,11 @@ const NewTask =()=>{
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.
                 </p>
                 <div className='flex justify-between mt-4'>
-                    <button className='bg-blue-500 py-1 px-2 text-sm'>Accept Task</button>
+                    <button className='bg-green-500 py-1 px-2 text-sm'>Mark as Completed</button>
+                    <button className='bg-red-500 py-1 px-2 text-sm'>Mark as Failed</button>
                 </div>
             </div>
     )
 }
+
+export default AcceptTask
