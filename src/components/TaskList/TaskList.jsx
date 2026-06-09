@@ -2,26 +2,26 @@ import react from 'react'
 import AcceptTask from './AcceptTask'
 import NewTask from './NewTask'
 import FailedTask from '/FailedTask'
-import ComepleteTask from './CompleteTask'
+import CompleteTask from './CompleteTask'
 
-const TaskList=()=>{
+const TaskList=({data})=>{
     return(
         <div id="task-list" className='overflow-x-auto h-[40%] mt-10 flex items-center justify-start gap-5 flex-nowrap'>
             {data.tasks.map((elem)=>{
                 if(elem.active){
-                    return <AcceptTask></AcceptTask>
+                    return <AcceptTask key={idx} data={elem}/>
                 }
 
                 if(elem.newTask){
-                    return <NewTask/>
+                    return <NewTask key={idx} data={elem}/>
                 }
 
                 if(elem.completed){
-                    return <ComepleteTask/>
+                    return <CompleteTask key={idx} data={elem}/>
                 }
 
                 if(elem.failed){
-                    return <FailedTask/>
+                    return <FailedTask key={idx} data={elem}/>
                 }
             })}
         </div>
